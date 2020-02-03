@@ -7,14 +7,11 @@ import (
   _ "image/jpeg"
 )
 
-func OpenImageFile(filename string) (image.Image, error) {
+func OpenImageFile(filename string) (image.Image, string, error) {
   file, err := os.Open(filename)
   HandleError(err)
 
   defer file.Close()
 
-  img, _, err := image.Decode(file)
-  HandleError(err)
-
-  return img, nil
+  return image.Decode(file)
 }

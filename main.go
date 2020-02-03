@@ -6,9 +6,17 @@ import (
   "github.com/nfnt/resize"
 )
 
+const (
+  MAX_HEIGHT = 100
+  MAX_WIDTH = 0
+  RESIZE_STRATEGY = resize.NearestNeighbor
+)
+
 func main() {
-  img, err := OpenImageFile(os.Args[1])
+  img, _, err := OpenImageFile(os.Args[1])
   HandleError(err)
-  resizedImg := resize.Resize(0, 100, img, resize.NearestNeighbor)
-  ToGrayscale(resizedImg)
+
+  img = resize.Resize(MAX_WIDTH, MAX_HEIGHT, img, RESIZE_STRATEGY)
+
+  ToGrayscale(img)
 }
