@@ -10,8 +10,7 @@ import (
   _ "image/jpeg"
 )
 
-// const ASCII = " .:-=+*#%@"
-const ASCII = "@%#*+=-:. "
+const ASCII = " .:-=+*#%@"
 
 func ToGrayscale(img image.Image) {
   bounds := img.Bounds()
