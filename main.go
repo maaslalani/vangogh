@@ -7,7 +7,7 @@ import (
 )
 
 const (
-  MAX_HEIGHT = 75
+  MAX_HEIGHT = 150
   MAX_WIDTH = 0
   RESIZE_STRATEGY = resize.NearestNeighbor
 )
