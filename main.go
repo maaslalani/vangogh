@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+  "os"
+
+  "github.com/nfnt/resize"
+)
 
 func main() {
-	fmt.Println("Hello, world!")
+  img, err := OpenImageFile(os.Args[1])
+  HandleError(err)
+  resizedImg := resize.Resize(0, 100, img, resize.NearestNeighbor)
+  ToGrayscale(resizedImg)
 }
