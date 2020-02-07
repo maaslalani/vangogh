@@ -1,9 +1,6 @@
 # Vangogh
 Vangogh is a command line tool for manipulating images in an artistic manner.
 
-### How?
-![Golang Gopher](gopher.png)
-
 Convert an image into ASCII art.
 ```
 vangogh ascii gopher.png
