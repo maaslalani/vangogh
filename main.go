@@ -6,6 +6,7 @@ import (
   "flag"
 
   "vangogh/text"
+  "vangogh/style"
 )
 
 func main() {
@@ -36,6 +37,6 @@ func main() {
   case textCommand.Parsed():
     text.Command(*filepath)
   case styleCommand.Parsed():
-    fmt.Println("Called style")
+    style.Command()
   }
 }
